@@ -126,7 +126,15 @@ struct SettingsView: View {
                             .stroke(.separator, lineWidth: 1)
                     }
                 } else {
-                    HStack {
+                    HStack(spacing: 12) {
+                        if !imagePath.isEmpty, let nsImage = NSImage(contentsOfFile: imagePath) {
+                            Image(nsImage: nsImage)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 48, height: 48)
+                                .clipShape(RoundedRectangle(cornerRadius: 6))
+                        }
+
                         Text(imagePath.isEmpty ? "No image selected" : imagePath)
                             .foregroundStyle(imagePath.isEmpty ? .secondary : .primary)
                             .lineLimit(1)
@@ -252,18 +260,44 @@ struct SettingsView: View {
     private var statusBanner: some View {
         switch coordinator.scheduler.status {
         case .countingDown:
-            HStack(spacing: 8) {
-                Image(systemName: "timer")
-                    .foregroundStyle(.green)
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("Reminders Active")
-                        .font(.headline)
-                    if let next = coordinator.runtimeState.nextTriggerAt {
-                        Text("Next reminder at \(next.formatted(date: .omitted, time: .shortened))")
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
+            if let next = coordinator.runtimeState.nextTriggerAt {
+                let totalSeconds = Double(coordinator.settings.reminderIntervalMinutes * 60)
+                TimelineView(.periodic(from: .now, by: 1)) { context in
+                    let remaining = max(0, next.timeIntervalSince(context.date))
+                    let progress = totalSeconds > 0 ? remaining / totalSeconds : 0
+                    HStack(spacing: 12) {
+                        ZStack {
+                            Circle()
+                                .stroke(Color.green.opacity(0.25), lineWidth: 2.5)
+                            Circle()
+                                .trim(from: 0, to: progress)
+                                .stroke(Color.green, style: StrokeStyle(lineWidth: 2.5, lineCap: .round))
+                                .rotationEffect(.degrees(-90))
+                        }
+                        .frame(width: 24, height: 24)
+
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Reminders Active")
+                                .font(.headline)
+                                .foregroundStyle(Color.green)
+                            Text("Next reminder at \(next.formatted(date: .omitted, time: .shortened))")
+                                .font(.subheadline)
+                                .foregroundStyle(Color.green.opacity(0.7))
+                        }
+
+                        Spacer()
+
+                        VStack(alignment: .trailing, spacing: 0) {
+                            Text(formatRemainingTime(remaining))
+                                .font(.system(size: 26, weight: .bold, design: .rounded))
+                                .foregroundStyle(Color.green)
+                            Text("remaining")
+                                .font(.caption)
+                                .foregroundStyle(Color.green.opacity(0.7))
+                        }
                     }
                 }
+                .listRowBackground(Color.green.opacity(0.1))
             }
         case .paused:
             HStack(spacing: 8) {
@@ -345,6 +379,11 @@ struct SettingsView: View {
 
     private func updateSettings(_ mutate: (inout ReminderSettings) -> Void) {
         coordinator.settingsStore.update(mutate)
+    }
+
+    private func formatRemainingTime(_ seconds: TimeInterval) -> String {
+        let s = Int(seconds)
+        return String(format: "%d:%02d", s / 60, s % 60)
     }
 
     private func selectImage() {
