@@ -1,0 +1,271 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000021 /* AppCoordinator.swift */; };
+		A10000000000000000000002 /* InputMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000022 /* InputMonitor.swift */; };
+		A10000000000000000000003 /* LaunchAtLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000023 /* LaunchAtLoginManager.swift */; };
+		A10000000000000000000004 /* MenuBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000024 /* MenuBarContentView.swift */; };
+		A10000000000000000000005 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000025 /* Models.swift */; };
+		A10000000000000000000006 /* OverlayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000026 /* OverlayPresenter.swift */; };
+		A10000000000000000000007 /* ReminderOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000027 /* ReminderOverlayView.swift */; };
+		A10000000000000000000008 /* ReminderScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000028 /* ReminderScheduler.swift */; };
+		A10000000000000000000009 /* RestReminderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000029 /* RestReminderApp.swift */; };
+		A1000000000000000000000A /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000002A /* SettingsStore.swift */; };
+		A1000000000000000000000B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000002B /* SettingsView.swift */; };
+		A1000000000000000000000C /* SettingsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000002C /* SettingsWindowController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A10000000000000000000011 /* Halt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Halt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000000000000000000012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Halt/Info.plist; sourceTree = SOURCE_ROOT; };
+		A10000000000000000000021 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/halt/AppCoordinator.swift; sourceTree = SOURCE_ROOT; };
+		A10000000000000000000022 /* InputMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/halt/InputMonitor.swift; sourceTree = SOURCE_ROOT; };
+		A10000000000000000000023 /* LaunchAtLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/halt/LaunchAtLoginManager.swift; sourceTree = SOURCE_ROOT; };
+		A10000000000000000000024 /* MenuBarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/halt/MenuBarContentView.swift; sourceTree = SOURCE_ROOT; };
+		A10000000000000000000025 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/halt/Models.swift; sourceTree = SOURCE_ROOT; };
+		A10000000000000000000026 /* OverlayPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/halt/OverlayPresenter.swift; sourceTree = SOURCE_ROOT; };
+		A10000000000000000000027 /* ReminderOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/halt/ReminderOverlayView.swift; sourceTree = SOURCE_ROOT; };
+		A10000000000000000000028 /* ReminderScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/halt/ReminderScheduler.swift; sourceTree = SOURCE_ROOT; };
+		A10000000000000000000029 /* RestReminderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/halt/RestReminderApp.swift; sourceTree = SOURCE_ROOT; };
+		A1000000000000000000002A /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/halt/SettingsStore.swift; sourceTree = SOURCE_ROOT; };
+		A1000000000000000000002B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/halt/SettingsView.swift; sourceTree = SOURCE_ROOT; };
+		A1000000000000000000002C /* SettingsWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/halt/SettingsWindowController.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A10000000000000000000031 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A10000000000000000000041 = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000042 /* Sources */,
+				A10000000000000000000043 /* Halt */,
+				A10000000000000000000044 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A10000000000000000000042 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000021 /* AppCoordinator.swift */,
+				A10000000000000000000022 /* InputMonitor.swift */,
+				A10000000000000000000023 /* LaunchAtLoginManager.swift */,
+				A10000000000000000000024 /* MenuBarContentView.swift */,
+				A10000000000000000000025 /* Models.swift */,
+				A10000000000000000000026 /* OverlayPresenter.swift */,
+				A10000000000000000000027 /* ReminderOverlayView.swift */,
+				A10000000000000000000028 /* ReminderScheduler.swift */,
+				A10000000000000000000029 /* RestReminderApp.swift */,
+				A1000000000000000000002A /* SettingsStore.swift */,
+				A1000000000000000000002B /* SettingsView.swift */,
+				A1000000000000000000002C /* SettingsWindowController.swift */,
+			);
+			path = Sources/halt;
+			sourceTree = SOURCE_ROOT;
+		};
+		A10000000000000000000043 /* Halt */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000012 /* Info.plist */,
+			);
+			path = Halt;
+			sourceTree = SOURCE_ROOT;
+		};
+		A10000000000000000000044 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000011 /* Halt.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A10000000000000000000051 /* Halt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000000000000000000061 /* Build configuration list for PBXNativeTarget "Halt" */;
+			buildPhases = (
+				A10000000000000000000032 /* Sources */,
+				A10000000000000000000031 /* Frameworks */,
+				A10000000000000000000033 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+			);
+			name = Halt;
+			packageProductDependencies = (
+			);
+			productName = Halt;
+			productReference = A10000000000000000000011 /* Halt.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A10000000000000000000052 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					A10000000000000000000051 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+				};
+			};
+			buildConfigurationList = A10000000000000000000062 /* Build configuration list for PBXProject "Halt" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A10000000000000000000041;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A10000000000000000000044 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A10000000000000000000051 /* Halt */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A10000000000000000000033 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A10000000000000000000032 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000001 /* AppCoordinator.swift in Sources */,
+				A10000000000000000000002 /* InputMonitor.swift in Sources */,
+				A10000000000000000000003 /* LaunchAtLoginManager.swift in Sources */,
+				A10000000000000000000004 /* MenuBarContentView.swift in Sources */,
+				A10000000000000000000005 /* Models.swift in Sources */,
+				A10000000000000000000006 /* OverlayPresenter.swift in Sources */,
+				A10000000000000000000007 /* ReminderOverlayView.swift in Sources */,
+				A10000000000000000000008 /* ReminderScheduler.swift in Sources */,
+				A10000000000000000000009 /* RestReminderApp.swift in Sources */,
+				A1000000000000000000000A /* SettingsStore.swift in Sources */,
+				A1000000000000000000000B /* SettingsView.swift in Sources */,
+				A1000000000000000000000C /* SettingsWindowController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A10000000000000000000071 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Halt/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codex.Halt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		A10000000000000000000072 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Halt/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codex.Halt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		A10000000000000000000073 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+			};
+			name = Debug;
+		};
+		A10000000000000000000074 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A10000000000000000000061 /* Build configuration list for PBXNativeTarget "Halt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000071 /* Debug */,
+				A10000000000000000000072 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10000000000000000000062 /* Build configuration list for PBXProject "Halt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000073 /* Debug */,
+				A10000000000000000000074 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A10000000000000000000052 /* Project object */;
+}
