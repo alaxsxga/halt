@@ -26,6 +26,7 @@ final class ReminderScheduler: ObservableObject {
         }
         overlayPresenter.present(
             content: settingsStore.settings.content,
+            imageBookmark: settingsStore.settings.lastImageBookmark,
             dismissKey: settingsStore.settings.dismissKey,
             requiredPresses: settingsStore.settings.dismissPressCount
         )
@@ -171,6 +172,7 @@ final class ReminderScheduler: ObservableObject {
         }
         overlayPresenter.present(
             content: settingsStore.settings.content,
+            imageBookmark: settingsStore.settings.lastImageBookmark,
             dismissKey: settingsStore.settings.dismissKey,
             requiredPresses: settingsStore.settings.dismissPressCount
         )

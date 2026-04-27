@@ -127,7 +127,7 @@ struct SettingsView: View {
                     }
                 } else {
                     HStack(spacing: 12) {
-                        if !imagePath.isEmpty, let nsImage = NSImage(contentsOfFile: imagePath) {
+                        if !imagePath.isEmpty, let nsImage = loadImage(path: imagePath, bookmark: coordinator.settings.lastImageBookmark) {
                             Image(nsImage: nsImage)
                                 .resizable()
                                 .scaledToFill()
@@ -393,12 +393,19 @@ struct SettingsView: View {
         panel.allowsMultipleSelection = false
         panel.allowedContentTypes = [.image]
 
-        if panel.runModal() == .OK, let url = panel.url {
-            imagePath = url.path
-            updateSettings {
-                $0.content = .image(path: url.path)
-                $0.lastImagePath = url.path
-            }
+        guard panel.runModal() == .OK, let url = panel.url else { return }
+
+        let bookmark = try? url.bookmarkData(
+            options: .withSecurityScope,
+            includingResourceValuesForKeys: nil,
+            relativeTo: nil
+        )
+
+        imagePath = url.path
+        updateSettings {
+            $0.content = .image(path: url.path)
+            $0.lastImagePath = url.path
+            $0.lastImageBookmark = bookmark
         }
     }
 }

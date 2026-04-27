@@ -14,7 +14,6 @@ At a configured interval, Halt shows a full-screen translucent overlay with a me
 ## Requirements
 
 - macOS 14 or later
-- Accessibility permission (required to detect the dismissal key when another app is in focus)
 
 ## Building
 

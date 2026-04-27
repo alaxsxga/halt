@@ -173,6 +173,7 @@ struct ReminderSettings: Codable, Equatable {
     var content: ReminderContent = .text("Time to take a break.")
     var lastTextContent: String = "Time to take a break."
     var lastImagePath: String = ""
+    var lastImageBookmark: Data?
     var dismissKey: DismissKey = .rightArrow
     var dismissPressCount = 10
     var postDismissDelayMinutes = 3

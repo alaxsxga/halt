@@ -11,9 +11,10 @@ final class OverlayPresenter {
     private var reminderSession: ReminderSession?
     private var workspaceObserver: NSObjectProtocol?
 
-    func present(content: ReminderContent, dismissKey: DismissKey, requiredPresses: Int) {
+    func present(content: ReminderContent, imageBookmark: Data?, dismissKey: DismissKey, requiredPresses: Int) {
         let overlayViewModel = ReminderOverlayViewModel(
             content: content,
+            imageBookmark: imageBookmark,
             dismissKey: dismissKey,
             requiredPresses: requiredPresses,
             onDismiss: { [weak self] in self?.onDismiss?() },

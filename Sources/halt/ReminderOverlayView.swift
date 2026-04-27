@@ -3,6 +3,7 @@ import SwiftUI
 @MainActor
 final class ReminderOverlayViewModel: ObservableObject {
     let content: ReminderContent
+    let imageBookmark: Data?
     let dismissKey: DismissKey
     let requiredPresses: Int
 
@@ -13,12 +14,14 @@ final class ReminderOverlayViewModel: ObservableObject {
 
     init(
         content: ReminderContent,
+        imageBookmark: Data?,
         dismissKey: DismissKey,
         requiredPresses: Int,
         onDismiss: @escaping () -> Void,
         onPause: @escaping (PauseOption) -> Void
     ) {
         self.content = content
+        self.imageBookmark = imageBookmark
         self.dismissKey = dismissKey
         self.requiredPresses = requiredPresses
         self.onDismiss = onDismiss
@@ -70,7 +73,7 @@ struct ReminderOverlayView: View {
                     .padding(.horizontal, 32)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             case .image(let path):
-                if let nsImage = NSImage(contentsOfFile: path) {
+                if let nsImage = loadImage(path: path, bookmark: viewModel.imageBookmark) {
                     Image(nsImage: nsImage)
                         .resizable()
                         .scaledToFit()
